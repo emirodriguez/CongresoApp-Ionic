@@ -1,0 +1,21 @@
+<ion-view title="Registro" id="registro">
+    <ion-content padding="true" class="has-header">
+        <form class="list" ng-submit="registro()">
+            <ion-list>
+                <label class="item item-input">
+                    <input type="text" name="nombre" placeholder="Nombre" ng-model="data.nombre">
+                </label>
+                <label class="item item-input">
+                    <input type="text" name="apellido" placeholder="Apellido" ng-model="data.apellido">
+                </label>
+                <label class="item item-input">
+                    <input type="email" name="email" placeholder="Email" ng-model="data.email">
+                </label>
+                <label class="item item-input">
+                    <input type="password" name="contrasenia" placeholder="Password" ng-model="data.contrasenia">
+                </label>
+            </ion-list>
+            <button type="submit" id="registro-button" name="submit" class="button button-positive  button-block">Registrarse</button>
+        </form>
+    </ion-content>
+</ion-view>

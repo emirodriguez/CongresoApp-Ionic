@@ -1,0 +1,26 @@
+<ion-view title="Cursos" id="evento">
+    <ion-content padding="true" class="has-header">
+        <h3 id="cursos-heading1" style="color:#387ef5;">{{ evento.nombre }}</h3>
+        <div>
+            <b>Fecha de inicio:</b> {{ evento.fecha_inicio }}
+        </div>
+        <div>
+            <b>Fecha de fin:</b> {{ evento.fecha_fin }}
+        </div>
+        <div>
+            <b>Lugar:</b> {{ evento.lugar }}
+        </div>
+        <div id="cursos-markdown2" style="color:#000000;">
+            <i>{{ evento.descripcion }}</i> 
+        </div>
+        <ion-list ng-repeat="curso in cursos" ng-show="cursos.length != 0">
+            <ion-item ng-click="inscripcionACurso({{ curso.id }})">
+                <b>{{ curso.nombre }}</b>
+                <p>{{ curso.dia_hora }}</p>
+            </ion-item>
+        </ion-list>
+        <p ng-show="cursos.length == 0"><br>
+            <b>No hay cursos registrados para este evento</b>
+        </p>
+    </ion-content>
+</ion-view>

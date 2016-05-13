@@ -1,0 +1,9 @@
+<ion-view title="Eventos" id="eventos">
+    <ion-content padding="true" class="has-header">
+        <ion-list can-swipe="listCanSwipe">
+            <ion-item ng-repeat="evento in eventos" ng-click="getEvento({{ evento.idEvento }})">
+            	<b>{{ evento.nombre }}</b>            	          
+    		</ion-item>
+        </ion-list>
+    </ion-content>
+</ion-view>
